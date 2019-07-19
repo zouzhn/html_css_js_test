@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<script type="text/javascript">
+			var str = 'sjdjd';
+			var a = 12;
+			var c = {
+				j: str,
+				k: a
+			};
+			var oW = new Worker('worker_test.js');
+			oW.postMessage(c);
+		</script>
+	</body>
+
+</html>
