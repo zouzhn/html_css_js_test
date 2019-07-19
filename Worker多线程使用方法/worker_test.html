@@ -1,3 +1,4 @@
+<!--主线程-->
 <!DOCTYPE html>
 <html>
 
@@ -11,15 +12,15 @@
 			var str = 'sjdjd';
 			var a = 12;
 			var c = {
-				j: str,
-				k: a
+			    j: str,
+			    k: a
 			};
 			var oW = new Worker('test.js');
 			oW.postMessage(c);
 			var dt = null;
 			oW.onmessage = function(ev) {
-				dt = ev.data;
-				console.log(dt);
+			    dt = ev.data;
+			    console.log(dt);
 			};
 		</script>
 	</body>
