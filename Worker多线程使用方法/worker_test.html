@@ -14,8 +14,13 @@
 				j: str,
 				k: a
 			};
-			var oW = new Worker('worker_test.js');
+			var oW = new Worker('test.js');
 			oW.postMessage(c);
+			var dt = null;
+			oW.onmessage = function(ev) {
+				dt = ev.data;
+				console.log(dt);
+			};
 		</script>
 	</body>
 
