@@ -1,3 +1,4 @@
+/*正常情况下，定时器函数setInterval或者setTimeout是不能带参数的，所以，可以通过返回一个不带参数的函数方式实现*/
 function putContent(t) {
 	return function() {
 		var a = 4;
